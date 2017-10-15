@@ -99,6 +99,7 @@ class Inbound_Found_Shortcodes_Public {
 		add_shortcode( 'if_img_quote', array( &$this, 'if_img_quote_shortcode' ) );
 		add_shortcode( 'if_fifty_fifty', array( &$this, 'if_fifty_fifty_shortcode' ) );
 		add_shortcode( 'if_bgimg_cta', array( &$this, 'if_bgimg_cta_shortcode' ) );
+		add_shortcode( 'if_double_cta', array( &$this, 'if_double_cta_shortcode' ) );
 	}
 
 	/**
@@ -276,6 +277,54 @@ TAG;
 			<section class="if-bgimg-cta" style="background-image: url($bgimg);">
 				<p>$text</p>
 				<a href="$ctalink" class="button ctabutton" style="background-color: $ctacolor;">$ctatext</a>
+			</section>
+TAG;
+	}
+	
+	/**
+	 * Defines a section with side by side calls to action.
+	 *
+	 * @since 1.0.0
+	 */
+	public function if_double_cta_shortcode( $atts = array() ) {
+		// normalize attribute keys
+		$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+		// merge passed in $atts with default values
+		$atts = shortcode_atts(
+			array(
+				'title' => '',
+				'text' => '',
+				'img' => '',
+				'ctatext' => '',
+				'ctalink' => '',
+				'ctacolor' => '#2374c5', // blue
+				'ctaside' => 'right',
+			),
+			$atts,
+			'if_fifty_fifty'
+		);
+
+		// convert the attributes into variables
+		extract( $atts );
+
+		// replace pipes with <br> in the text and title
+		$text = str_replace( '|', '<br>', $text );
+		$title = str_replace( '|', '<br>', $title );
+
+		$side = 'right' == $ctaside ? 'ctaright' : 'ctaleft';
+
+		// output the content
+		return <<<TAG
+			<section class="if-double-cta $side">
+				<img src="$img">
+				<div>
+					<div>
+						<h1>$title</h1>
+						<p>$text</p>
+					</div>
+					<a href="$ctalink" class="button ctabutton" style="background-color: $ctacolor;">$ctatext</a>
+				</div>
 			</section>
 TAG;
 	}
