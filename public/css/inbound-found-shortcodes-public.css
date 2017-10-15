@@ -6,25 +6,25 @@ section.if-bubbles {
   text-align: center;
 }
 .if-bubbles h1 {
-  font-family: Mukta, sans-serif;
+/*  font-family: Mukta, sans-serif;
   font-weight: 300;
   font-size: 4rem;
   text-align: center;
-  margin-bottom: 4.5rem;
-  color: #606060;
+  color: #606060;*/
+  margin-bottom: 2rem;
 }
 .if-bubbles div { text-align: center; }
 .if-bubbles div h2 {
-  width: 150px;
-  height: 150px;
-  background-color: #efefef;
-  border-radius: 50%;
-  text-align: center;
-  font-family: 'Mukta', sans-serif;
-  font-weight: 600;
-  font-size: 72px;
-  padding: 36px 0;
-  margin: 0 auto 2rem;
+  width: 150px !important;
+  height: 150px !important;
+  background-color: #efefef !important;
+  border-radius: 50% !important;
+/*  text-align: center !important;*/
+  font-family: 'Mukta', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 72px !important;
+  padding: 36px 0 !important;
+  margin: 0 auto 2rem !important;
 }
 .if-bubbles div h2 span {
   font-size: 36px;
@@ -35,13 +35,13 @@ section.if-bubbles {
 .if-bubbles div:nth-child(4) h2 { color: #606060; }
 .if-bubbles div p {
   font-family: 'Open-Sans', sans-serif;
-  font-weight: 300;
-  color: #606060;
+/*  font-weight: 300;
+  color: #606060;*/
   hyphens: auto;
 }
 @media only screen and (min-width: 980px) {
   section.if-bubbles {
-    padding: 6rem;
+    padding: 0 0 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -49,7 +49,7 @@ section.if-bubbles {
     grid-column-start: 1;
     grid-column-end: 4;
   }
-  .if-bubbles div { padding: 0 2.5rem; }
+  .if-bubbles div { padding: 0 1.2rem; }
 }
 @media only screen and (min-width: 560px) and (max-width: 979px) {
   section.if-bubbles {
@@ -81,7 +81,7 @@ section.if-bubbles {
  * Image + Quote
  */
 section.if-img-quote {
-  padding: 10rem 20rem;
+  padding: 6rem 20rem;
   margin: 0 -20rem;
   text-align: center;
   background-size: cover;
@@ -92,22 +92,23 @@ section.if-img-quote {
 .if-img-quote p {
   font-family: Mukta, sans-serif;
   font-weight: 300;
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: 0;
   color: #606060;
-  line-height: 5rem;
+  line-height: 1.2;
 }
 @media only screen and (min-width: 560px) {
   section.if-img-quote {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 10rem 26rem;
+    /*padding: 10rem 26rem;*/
     margin: 0 -20rem;
     text-align: left;
   }
   .if-img-quote img {
     align-self: center;
     justify-self: center;
+    padding-bottom: 0;
   }
   .if-img-quote p { padding-left: 2rem; }
 }
@@ -121,11 +122,11 @@ section.if-fifty-fifty.ctaleft {
   margin: 0 -20rem;
 }
 .if-fifty-fifty div h1 {
-  font-family: Mukta, sans-serif;
-  font-weight: 300;
-  font-size: 3.5rem;
+  /*font-family: Mukta, sans-serif;
+  font-weight: 300;*/
+  font-size: 2rem;
   margin-bottom: 1rem;
-  color: #606060;
+  /*color: #606060;*/
 }
 .if-fifty-fifty div p {
   font-family: 'Open-Sans', sans-serif;
@@ -136,20 +137,22 @@ section.if-fifty-fifty.ctaleft {
 .if-fifty-fifty div a.ctabutton {
   text-transform: uppercase;
   font-family: 'Mukta', sans-serif;
-  font-weight: 300;
-  text-decoration: none;
-  font-size: 2rem;
+  /*font-weight: 300;*/
+  /*text-decoration: none;*/
+  font-size: 1.25rem;
   letter-spacing: 0.1rem;
+  border-radius: 0;
+  border: none;
 }
 @media only screen and (min-width: 980px) {
   section.if-fifty-fifty {
-    padding: 6rem;
+    /*padding: 6rem;*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
   }
   section.if-fifty-fifty.ctaleft {
-    padding: 6rem 26rem;
+    /*padding: 6rem 26rem;*/
     margin: 0 -20rem;
   }
   .if-fifty-fifty img {
@@ -229,18 +232,20 @@ section.if-bgimg-cta {
   background-size: cover;
 }
 .if-bgimg-cta p {
-  font-family: Mukta, sans-serif;
-  font-weight: 300;
-  font-size: 3.5rem;
+  /*font-family: Mukta, sans-serif;
+  font-weight: 300;*/
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #606060;
-  line-height: 5rem;
+  /*color: #606060;
+  line-height: 5rem;*/
 }
 .if-bgimg-cta a.ctabutton {
   text-transform: uppercase;
   font-family: 'Mukta', sans-serif;
-  font-weight: 300;
-  text-decoration: none;
-  font-size: 2rem;
+  /*font-weight: 300;
+  text-decoration: none;*/
+  font-size: 1.25rem;
   letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 0;
 }
