@@ -293,16 +293,21 @@ TAG;
 		// merge passed in $atts with default values
 		$atts = shortcode_atts(
 			array(
-				'title' => '',
-				'text' => '',
-				'img' => '',
-				'ctatext' => '',
-				'ctalink' => '',
-				'ctacolor' => '#2374c5', // blue
-				'ctaside' => 'right',
+				'title1' => '',
+				'text1' => '',
+				'img1' => '',
+				'ctatext1' => '',
+				'ctalink1' => '',
+				'ctacolor1' => '#2374c5', // blue
+				'title2' => '',
+				'text2' => '',
+				'img2' => '',
+				'ctatext2' => '',
+				'ctalink2' => '',
+				'ctacolor2' => '#2374c5', // blue
 			),
 			$atts,
-			'if_fifty_fifty'
+			'if_double_cta'
 		);
 
 		// convert the attributes into variables
@@ -312,20 +317,20 @@ TAG;
 		$text = str_replace( '|', '<br>', $text );
 		$title = str_replace( '|', '<br>', $title );
 
-		$side = 'right' == $ctaside ? 'ctaright' : 'ctaleft';
-
 		// output the content
 		return <<<TAG
-			<section class="if-double-cta $side">
-				<img src="$img">
-				<div>
-					<div>
-						<h1>$title</h1>
-						<p>$text</p>
-					</div>
+			<section class="if-double-cta">
+				<div class="one-half first" style="text-align: center">
+					<img class="aligncenter" src="$img" />
+					<h3>$title</h3>
+					<p>$text</p>
 					<a href="$ctalink" class="button ctabutton" style="background-color: $ctacolor;">$ctatext</a>
 				</div>
+				<div class="one-half" style="text-align: center">
+					<img class="aligncenter" src="https://www.ms3-inc.com/wp-content/uploads/2015/10/solve.png" alt="solve with us" /><h3>Let's Talk</h3><p>We're literally the experts in Mulesoft and SAAS/API integration. See how we've helped major brands integrate their systems. <br><a class="button orange" href="https://staging.ms3.flywheelsites.com/contact/" style="margin-top: 15px">Contact Us</a></p>
+				</div>
 			</section>
+
 TAG;
 	}
 }
