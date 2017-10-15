@@ -321,13 +321,16 @@ TAG;
 		return <<<TAG
 			<section class="if-double-cta">
 				<div class="one-half first" style="text-align: center">
-					<img class="aligncenter" src="$img" />
-					<h3>$title</h3>
-					<p>$text</p>
-					<a href="$ctalink" class="button ctabutton" style="background-color: $ctacolor;">$ctatext</a>
+					<img class="aligncenter" src="$img1" />
+					<h3>$title1</h3>
+					<p>$text1</p>
+					<a href="$ctalink1" class="button ctabutton" style="background-color: $ctacolor1;">$ctatext</a>
 				</div>
-				<div class="one-half" style="text-align: center">
-					<img class="aligncenter" src="https://www.ms3-inc.com/wp-content/uploads/2015/10/solve.png" alt="solve with us" /><h3>Let's Talk</h3><p>We're literally the experts in Mulesoft and SAAS/API integration. See how we've helped major brands integrate their systems. <br><a class="button orange" href="https://staging.ms3.flywheelsites.com/contact/" style="margin-top: 15px">Contact Us</a></p>
+				<div class="one-half first" style="text-align: center">
+					<img class="aligncenter" src="$img2" />
+					<h3>$title2</h3>
+					<p>$text2</p>
+					<a href="$ctalink2" class="button ctabutton" style="background-color: $ctacolor;">$ctatext2</a>
 				</div>
 			</section>
 
