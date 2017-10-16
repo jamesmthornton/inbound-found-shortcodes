@@ -158,6 +158,7 @@ section.if-fifty-fifty.ctaleft {
   .if-fifty-fifty img {
     padding-right: 1rem;
     align-self: center;
+    margin: auto;
   }
   .if-fifty-fifty > div { padding-left: 1rem; }
   .if-fifty-fifty.ctaleft img {
