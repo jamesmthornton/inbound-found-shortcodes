@@ -319,7 +319,7 @@ TAG;
 
 		// output the content
 		return <<<TAG
-			<section class="if-double-cta">
+			<section class="if-fifty-fifty if-double-cta">
 				<div class="one-half first" style="text-align: center">
 					<img class="aligncenter" src="$img1" />
 					<h3>$title1</h3>
